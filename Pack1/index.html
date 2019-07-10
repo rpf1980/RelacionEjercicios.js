@@ -4,9 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Relacion primera de ejercicos javascript</title>
+    <title>Primera relación de ejercicios iniciales en javascript</title>
 </head>
 <body>
+    <h3>Ejercicio 1:</h3>
+    <h4># Tabla de multiplicar de un número n</h4>
+
+    <div>
+        <input type="text" id="idEj1" placeholder="Escribe un número:">
+        <button onclick="document.getElementById('idSol1').innerHTML = tablaMultiplicar(document.getElementById('idEj1').value)">Click aquí</button>
+        <button onclick="limpiar();">Limpiar</button>
+        <p id="idSol1"></p>
+    </div>
+
+    <h3>Ejercicio 2:</h3>
+    <h4># Escribir 12 MONOS MOLÓN en los 6 tamaños de las cabeceras HTML</h4>
+    
+    <div>
+        <input type="text" id="idEj2" placeholder="Escribe 12 Monos Molón">
+        <button onclick="document.getElementById('idSol2').innerHTML = cabeceras(document.getElementById('idEj2').value)">Click aquí</button>
+        <button onclick="">Limpiar</button>
+        <p id="idSol2"></p>
+    </div>
     <script src="./app.js"></script>
 </body>
 </html>
