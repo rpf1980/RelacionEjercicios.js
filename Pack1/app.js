@@ -30,11 +30,14 @@ function cabeceras(cadena){
 
     for(i = 1; i <= 6; i++){
 
-        str = str + '<h' + i + '>' + cadena.value + '</h' + i + '>' + '</br>'; 
+        str = str + '<h' + i + '>' + cadena + '</h' + i + '>' + '</br>'; 
     }
 
     return str;
 }
 
+function limpiar2(){
 
-
+    idSol2.innerHTML = "";
+    inputEjerc2.value = "";
+}
