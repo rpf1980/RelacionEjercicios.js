@@ -26,14 +26,28 @@
         <button onclick="limpiar2();">Limpiar</button>
         <p id="idSol2"></p>
     </div>
-    <script src="./app.js"></script>
+    
     
     <h3>Ejercicio 3: </h3>
     <h4># Factorial de un número</h4>
 
     <div>
         <input type="text" id="idEj3" placeholder="Escribe un número">
-
+        <button onclick="document.getElementById('idSol3').innerHTML = factorial(document.getElementById('idEj3').value)">Factorial</button>
+        <button onclick="limpiar3();">Limpiar</button>
+        <p id="idSol3"></p>
     </div>
+
+    <h3>Ejercicio 4:</h3>
+    <h4>Dada una cadena, ¿tiene solo mayúsculas, solo minúsculas o ambas?</h4>
+
+    <div>
+        <input type="text" id="idEj4" placeholder="Escribe una frase">
+        <button onclick="document.getElementById('idSol4').innerHTML = compruebaMaysMinsAmbas(document.getElementById('idEj4').value)">Click aquí</button>
+        <button onclick="limpiar4();">Limpiar</button>
+        <p id="idSol4"></p>
+    </div>
+
+    <script src="./app.js"></script>
 </body>
 </html>
