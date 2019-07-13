@@ -69,34 +69,40 @@ const solucion4 = document.getElementById('idSol4');
 
 function compruebaMaysMinsAmbas(cadena) {
 
-    let contUppercase = 0;
-    let contLowercase = 0;
-    let message = "";
+    let contMax = 0;
+    let contMin = 0;
+    let msg = "";
 
-    for (i = 0; i < cadena.length; i++) {
+    for(i = 0; i < cadena.length; i++){
 
-        if (cadean[i].toUpperCase() == cadena[i]) {
+        if(cadena[i].toUpperCase() == cadena[i]){
 
-            contUppercase++;
-        }
-        else if (cadena[i].toLowerCase() == cadena[i]) {
+            console.log(cadena[i]);
+            contMax++;
+        }else{
 
-            contLowercase++;
+            if(cadena[i].toLowerCase() == cadena[i]){
+
+                contMin++;
+            }
         }
     }
 
-    if (cadena.length === contUppercase) {
+    if(contMax == cadena.length){
 
-        message = "La cadena está compuesta solo por mayúsculas";
-    } else if (cadena.length === contLowercase) {
+        msg = "El texto está compuesto solo de mayúsculas";
+    }else{
 
-        message = "La cadena está compuesta solo por minúsculas";
-    } else {
+        if(contMin == cadena.length){
 
-        message = "La cadena está compuesta tanto por mayúsculas como minúsculas";
+            msg = "El texto está compuesto solo de minúsculas";
+        }else{
+
+            msg = "El texto contiene tanto mayúsculas como minúsculas";
+        }
     }
 
-    return message;
+    return msg;
 }
 
 function limpiar4() {
