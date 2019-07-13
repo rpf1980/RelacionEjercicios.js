@@ -73,30 +73,30 @@ function compruebaMaysMinsAmbas(cadena) {
     let contMin = 0;
     let msg = "";
 
-    for(i = 0; i < cadena.length; i++){
+    for (i = 0; i < cadena.length; i++) {
 
-        if(cadena[i].toUpperCase() == cadena[i]){
+        if (cadena[i].toUpperCase() == cadena[i]) {
 
             console.log(cadena[i]);
             contMax++;
-        }else{
+        } else {
 
-            if(cadena[i].toLowerCase() == cadena[i]){
+            if (cadena[i].toLowerCase() == cadena[i]) {
 
                 contMin++;
             }
         }
     }
 
-    if(contMax == cadena.length){
+    if (contMax == cadena.length) {
 
         msg = "El texto está compuesto solo de mayúsculas";
-    }else{
+    } else {
 
-        if(contMin == cadena.length){
+        if (contMin == cadena.length) {
 
             msg = "El texto está compuesto solo de minúsculas";
-        }else{
+        } else {
 
             msg = "El texto contiene tanto mayúsculas como minúsculas";
         }
@@ -109,5 +109,28 @@ function limpiar4() {
 
     solucion4.innerHTML = "";
     inputEjerc4.value = "";
+}
+
+// Ejercicio 5
+const valorInput5 = document.getElementById('idEj5');
+const solucion5 = document.getElementById('idSol5');
+
+function arrayCadena(cadena) {
+
+    let numeroPalabras = 0;
+    let primeraPalabra = "";
+    let ultimaPalabra = "";
+    let textoInvertidos = "";
+    let ordenadoA_Z = "";
+    let ordenadoZ_A = "";   
+
+    const array = cadena.split(" ");
+
+}
+
+function limpiar5() {
+
+    solucion5.innerHTML = "";
+    valorInput5.value = "";
 }
 
