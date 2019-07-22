@@ -66,33 +66,51 @@ function limpiar3() {
 const inputEjerc4 = document.getElementById('idEj4');
 const solucion4 = document.getElementById('idSol4');
 
+function isLetter(str) {
+
+    return str.length === 1 && str.match(/[az]/i);
+}
+
 function compruebaMaysMinsAmbas(texto) {
 
     let cadena = texto.replace(/ /g, '');
     let contUppercase = 0;
     let contLowercase = 0;
+    let contNumbers = 0;
     let message = "";
 
     for (i = 0; i < cadena.length; i++) {
 
-        if (cadena[i].toUpperCase() == cadena[i]) {
+        if (cadena[i].toUpperCase() == cadena[i] && isLetter(cadena[i])) {
 
             contUppercase++;
-        } else if (cadena[i].toLowerCase() == cadena[i]) {
+
+        } else if (cadena[i].toLowerCase() == cadena[i] && isLetter(cadena[i])) {
 
             contLowercase++;
+
+        } else {
+
+            contNumbers++;
         }
     }
 
-    if (cadena.length === contUppercase) {
+    if (cadena.length === contUppercase && contNumbers == 0) {
 
         message = "La cadena está compuesta solo por mayúsculas";
-    } else if (cadena.length === contLowercase) {
+
+    } else if (cadena.length === contLowercase && contNumbers == 0) {
 
         message = "La cadena está compuesta solo por minúsculas";
+
+    } else if (contNumbers != 0) {
+
+        message = "La cadena contiene dígitos";
+
     } else {
 
         message = "La cadena está compuesta tanto por mayúsculas como minúsculas";
+
     }
 
     return message;
