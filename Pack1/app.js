@@ -1,4 +1,3 @@
-
 // Ejercicio 1
 const idSol1 = document.getElementById('idSol1');
 const inputEjerc1 = document.getElementById('idEj1');
@@ -75,11 +74,10 @@ function compruebaMaysMinsAmbas(cadena) {
 
     for (i = 0; i < cadena.length; i++) {
 
-        if (cadean[i].toUpperCase() == cadena[i]) {
+        if (cadena[i].toUpperCase() == cadena[i]) {
 
             contUppercase++;
-        }
-        else if (cadena[i].toLowerCase() == cadena[i]) {
+        } else if (cadena[i].toLowerCase() == cadena[i]) {
 
             contLowercase++;
         }
@@ -104,4 +102,3 @@ function limpiar4() {
     solucion4.innerHTML = "";
     inputEjerc4.value = "";
 }
-
