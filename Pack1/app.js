@@ -69,7 +69,7 @@ const solucion4 = document.getElementById('idSol4');
 
 function compruebaMaysMinsAmbas(texto) {
 
-    let cadena = texto.replace(/ /g,'');
+    let cadena = texto.replace(/ /g, '');
     let contMax = 0;
     let contMin = 0;
     let msg = "";
@@ -78,8 +78,8 @@ function compruebaMaysMinsAmbas(texto) {
 
         if (cadena[i].toUpperCase() == cadena[i]) {
 
-            console.log(cadena[i]);
             contMax++;
+
         } else {
 
             if (cadena[i].toLowerCase() == cadena[i]) {
@@ -118,14 +118,20 @@ const solucion5 = document.getElementById('idSol5');
 
 function arrayCadena(cadena) {
 
-    let numeroPalabras = 0;
-    let primeraPalabra = "";
-    let ultimaPalabra = "";
-    let textoInvertidos = "";
-    let ordenadoA_Z = "";
-    let ordenadoZ_A = "";   
-
     const array = cadena.split(" ");
+
+    let resultado = "Número de palabras = " + array.length + '<br/>';
+    resultado = resultado + "Primera palabra = " + array[0] + '<br/>';
+    resultado = resultado + "Última palabra = " + array[array.length - 1] + '<br/>';
+    array.reverse();
+    resultado = resultado + "Palabras en orden inverso = " + array + '<br/>';
+    array.sort();
+    resultado = resultado + "Ordenadas de la A a la Z = " + array + '<br/>';
+    array.reverse();
+    resultado = resultado + "Ordenadas de la Z a la A = " + array;
+
+    return resultado;
+
 
 }
 
@@ -133,5 +139,12 @@ function limpiar5() {
 
     solucion5.innerHTML = "";
     valorInput5.value = "";
+}
+
+// Ejercicio 6
+function muestraMeses() {
+
+    const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+
 }
 
