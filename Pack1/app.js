@@ -67,8 +67,9 @@ function limpiar3() {
 const inputEjerc4 = document.getElementById('idEj4');
 const solucion4 = document.getElementById('idSol4');
 
-function compruebaMaysMinsAmbas(cadena) {
+function compruebaMaysMinsAmbas(texto) {
 
+    let cadena = texto.replace(/ /g,'');
     let contMax = 0;
     let contMin = 0;
     let msg = "";
