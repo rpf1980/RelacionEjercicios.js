@@ -142,9 +142,26 @@ function limpiar5() {
 }
 
 // Ejercicio 6
+const p = document.getElementById('idSol6');
 function muestraMeses() {
 
     const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+    let result = "";
 
+    for(i = 0; i < meses.length; i++){
+
+        result = result + meses[i] + "<br/>";
+    }
+
+    return result;
 }
+
+function limpiar6() {
+
+    p.innerHTML = "";
+}
+
+// Ejercicio 8
+// Dado un DNI comprueba si es correcto. Para ello se utiliza la siguiente fórmula:
+// DNI / 23 = índice de la letra correspondiente en "TRWAGMYFPDXBNJZSQVHLCKE".
 
