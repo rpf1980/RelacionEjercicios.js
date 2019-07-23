@@ -165,3 +165,4 @@ function limpiar6() {
 // Dado un DNI comprueba si es correcto. Para ello se utiliza la siguiente fórmula:
 // DNI / 23 = índice de la letra correspondiente en "TRWAGMYFPDXBNJZSQVHLCKE".
 
+function dniCorrecto()
