@@ -148,7 +148,7 @@ function muestraMeses() {
     const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
     let result = "";
 
-    for(i = 0; i < meses.length; i++){
+    for (i = 0; i < meses.length; i++) {
 
         result = result + meses[i] + "<br/>";
     }
@@ -161,8 +161,146 @@ function limpiar6() {
     p.innerHTML = "";
 }
 
+// Ejercicio 7
+// Dado un número, devuelve una cadena que dice si es par o impar.
+const idInput7 = document.getElementById('idEj7');
+const idSol7 = document.getElementById('idSol7');
+
+let response = "";
+
+function parImpar(number) {
+
+    let n = parseInt(number);
+
+    console.log(n);
+
+    if (n % 2 == 0) {
+
+        response = "El número " + n + " es par";
+
+    } else {
+
+        response = "El número " + n + " es impar";
+    }
+
+    return response;
+}
+
+function limpiar7() {
+
+    idInput7.value = "";
+    idSol7.innerHTML = "";
+}
+
 // Ejercicio 8
 // Dado un DNI comprueba si es correcto. Para ello se utiliza la siguiente fórmula:
 // DNI / 23 = índice de la letra correspondiente en "TRWAGMYFPDXBNJZSQVHLCKE".
 
-function dniCorrecto()
+const txtSol8 = document.getElementById('idSol8');
+const idInput8 = document.getElementById('idEj8');
+const idInputLetra = document.getElementById('idLetraDni');
+
+const letrasDni = "TRWAGMYFPDXBNJZSQVHLCKE";
+let suma = 0;
+let resultado = "";
+
+function checkDNI(numero, letra) {
+
+    for (i = 0; i < 8; i++) {
+
+        suma = suma + numero[i];
+    }
+
+    if (letra.toUpperCase() === letrasDni[suma % 23]) {
+
+        resultado = "DNI válido";
+
+    } else {
+
+        resultado = "DNI incorrecto";
+
+    }
+
+    return resultado;
+}
+
+function limpiar8() {
+
+    txtSol8.innerHTML = "";
+    idInput8.value = "";
+    idInputLetra.value = "";
+}
+
+// Ejercicio 9
+// Comprueba si la cadena dada es un palíndromo.
+
+const sol9 = document.getElementById('idSol9');
+const input9 = document.getElementById('idInput9');
+
+// Funciones aparte
+function quitaEspacios(cadena) {
+
+    let cadena2 = cadena.replace(/ /g, '');
+
+    return cadena2;
+}
+
+function quitaAcentos(cadena) {
+
+    let copia = "";
+    const con = "áàäéèëíìïóòöúùuñÁÀÄÉÈËÍÌÏÓÒÖÚÙÜÑçÇ";
+    const sin = "aaaeeeiiiooouuunAAAEEEIIIOOOUUUNcC";
+
+    for(i = 0; cadena.length; i++) {
+
+        for(j = 0; con.length; j++) {
+
+            if(cadena.charAt(i) === con.charAt(j)) {
+
+                copia = cadena.replace(cadena.charAt(i), sin.charAt(j));
+            }
+        }
+    }
+
+    return copia;
+}
+
+function invierteString(str) {
+
+    let invertido = "";
+
+    for(let char of str) {
+
+        invertido = char + invertido;
+    }
+
+    return invertido;
+}
+
+function esPalindromo(cadena) {
+
+    debugger;
+
+    let response = "";
+
+    let copia = quitaEspacios(cadena);
+    let cadenaLimpia = quitaAcentos(copia);
+    let invertida = invierteString(cadenaLimpia);
+
+    if(cadenaLimpia.toLowerCase() === invertida.toLowerCase()){
+
+        response = "La cadena es un PALÍNDROMO";
+
+    }else{
+
+        response = "La cadena NO es un Palíndromo";
+    }
+
+    return response;
+}
+
+function limpiar9() {
+
+    sol9.innerHTML = "";
+    input9.value = "";
+}
