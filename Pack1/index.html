@@ -60,8 +60,9 @@
 
     <h3>Ejercicio 6:</h3>
     <h4>Crear un array con los doce meses del año y mostrarlo en la página</h4>
-    <button id="idBtnMeses" onclick="muestraMeses();">Mostrar meses</button>
-
+    <button id="idBtnMeses" onclick="document.getElementById('idSol6').innerHTML = muestraMeses()">Mostrar meses</button>
+    <button onclick="limpiar6();">Limpiar</button>
+    <p id="idSol6"></p>
     <script src="./app.js"></script>
 </body>
 </html>
