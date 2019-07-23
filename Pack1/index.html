@@ -63,6 +63,28 @@
     <button id="idBtnMeses" onclick="document.getElementById('idSol6').innerHTML = muestraMeses()">Mostrar meses</button>
     <button onclick="limpiar6();">Limpiar</button>
     <p id="idSol6"></p>
+
+    <h3>Ejercicio 7:</h3>
+    <h4>Número par o impar</h4>
+    <input type="text" id="idEj7" placeholder="Escribe un número">
+    <button onclick="document.getElementById('idSol7').innerHTML = parImpar(document.getElementById('idEj7').value)">Click here</button>
+    <button onclick="limpiar7();">Limpiar</button>
+    <p id="idSol7"></p>
+
+    <h3>Ejercicio 8:</h3>
+    <h4>Comprueba DNI</h4>
+    <input type="text" id="idEj8" placeholder="Escribe DNI">
+    <input type="text" id="idLetraDni" placeholder="Letra">
+    <button id="idBtnComprobar" onclick="document.getElementById('idSol8').innerHTML = checkDNI(document.getElementById('idEj8').value, document.getElementById('idLetraDni').value)">Comprobar</button>
+    <button onclick="limpiar8();">Limpiar</button>
+    <p id="idSol8"></p>
+
+    <h3>Ejercicio 9:</h3>
+    <h4>Comprueba si es un palíndromo</h4>
+    <input type="text" id="idInput9" placeholder="Escribe texto">
+    <button onclick="document.getElementById('idSol9').innerHTML = esPalindromo(document.getElementById('idInput9').value)">Click here</button>
+    <button onclick="limpiar9();">Limpiar</button>
+    <p id="idSol9"></p>
     <script src="./app.js"></script>
 </body>
 </html>
