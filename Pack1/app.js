@@ -279,7 +279,6 @@ function invierteString(str) {
 
 function esPalindromo(cadena) {
 
-    debugger;
 
     let response = "";
 
